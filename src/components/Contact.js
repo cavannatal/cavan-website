@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Linkedin, GithubIcon, ArrowRight } from 'lucide-react';
+import { Mail, Phone, Linkedin, GithubIcon, } from 'lucide-react';
 
 const ContactItem = ({ icon: Icon, label, value, link }) => {
   const [isHovered, setIsHovered] = useState(false);

@@ -4,8 +4,8 @@ import { Code, Database, Brain, Globe } from 'lucide-react';
 // Import icons for programming languages and libraries
 import { 
   SiPython, SiJavascript, SiCplusplus, SiR,
-  SiReact, SiTailwindcss, SiAmazonaws, SiNodedotjs, SiExpress, SiHtml5, SiCss3,
-  SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiPytorch, SiMatplotlib, SiScipy, SiKeras,
+  SiReact, SiTailwindcss,  SiNodedotjs, SiExpress, SiHtml5, SiCss3,
+  SiPandas, SiNumpy, SiScikitlearn, SiTensorflow, SiPytorch,  SiScipy, SiKeras,
   SiMongodb, SiPostgresql, SiGit, SiDocker, SiOpencv, SiJupyter
 } from 'react-icons/si';
 import { FaJava } from "react-icons/fa6";
