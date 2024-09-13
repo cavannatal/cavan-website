@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Linkedin, GithubIcon, } from 'lucide-react';
+import { Mail, Phone, Linkedin, GithubIcon, ArrowRight } from 'lucide-react';
 
 const ContactItem = ({ icon: Icon, label, value, link }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -9,37 +9,50 @@ const ContactItem = ({ icon: Icon, label, value, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center p-4 bg-white rounded-lg shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+      className="group flex items-center p-6 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:from-blue-50 hover:to-indigo-50"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`mr-4 text-gray-600 transition-all duration-300 ${isHovered ? 'scale-110' : ''}`}>
-        <Icon size={24} />
+      <div className={`mr-6 text-blue-600 transition-all duration-300 ${isHovered ? 'scale-125 rotate-12' : ''}`}>
+        <Icon size={28} strokeWidth={2} />
       </div>
-      <div>
-        <p className="text-sm font-semibold text-gray-600">{label}</p>
-        <p className="text-lg font-medium text-gray-800">{value}</p>
+      <div className="flex-grow">
+        <p className="text-sm font-semibold text-gray-500 mb-1">{label}</p>
+        <p className="text-lg font-bold text-gray-800 group-hover:text-blue-700 transition-colors duration-300">{value}</p>
       </div>
+      <ArrowRight className="text-blue-500 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
     </a>
   );
 };
 
 const CallToAction = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="mt-12 p-6 bg-blue-500 rounded-lg shadow-lg text-white animate-fade-in-up">
-      <h3 className="text-2xl font-bold mb-4">Ready to see what I can do?</h3>
-      <p className="text-lg mb-6">
-        Give me a chance to show you my skills and dedication. I promise you won't regret it!
-      </p>
-      
+    <div className="mt-16 p-8 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl shadow-2xl text-white overflow-hidden relative">
+      <div className={`absolute inset-0 bg-blue-600 transition-transform duration-500 ease-in-out transform ${isHovered ? 'scale-x-100' : 'scale-x-0'} origin-left`}></div>
+      <div className="relative z-10">
+        <h3 className="text-3xl font-extrabold mb-4">Ready to Collaborate?</h3>
+        <p className="text-xl mb-8 opacity-90">
+          Let's turn your vision into reality. Together, we can create something extraordinary!
+        </p>
+        <button
+          className="px-8 py-3 bg-white text-blue-600 font-bold rounded-full transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg transform hover:-translate-y-1"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          Let's Connect
+        </button>
+      </div>
     </div>
   );
 };
 
 const Contact = () => {
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <h2 className="text-4xl font-bold mb-8 text-center text-gray-800 animate-fade-in-down">Get in Touch</h2>
+    <div className="max-w-5xl mx-auto p-8 bg-gradient-to-b from-gray-50 to-white">
+      <h2 className="text-5xl font-extrabold mb-2 text-center text-gray-800 animate-fade-in-down">Let's Connect</h2>
+      <p className="text-xl text-center text-gray-600 mb-12 animate-fade-in-up">I'm always excited to discuss new opportunities and ideas</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up">
         <ContactItem
           icon={Mail}
