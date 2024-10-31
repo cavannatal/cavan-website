@@ -4,7 +4,7 @@ import { Menu, X, GithubIcon, Linkedin, Mail } from 'lucide-react'; // Updated i
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Experience from './components/Experience';
+import Experience from './pages/ExperiencePage/Experience';
 import Contact from './components/Contact';
 
 const Header = () => {

@@ -91,13 +91,13 @@ const Skills = () => {
     },
     {
       title: "Databases & Tools",
-      skills: ["SQL", "MongoDB", "PostgreSQL", "Git", "Docker", "OpenCV", "BeautifulSoup", "Jupyter"],
+      skills: ["SQL", "MongoDB", "PostgreSQL", "Git", "Docker", "OpenCV", "Jupyter"],
       icon: Database,
       softSkills: ["Data Modeling", "System Design", "Data Management"],
     },
     {
       title: "Web Technologies",
-      skills: ["React", "TailwindCSS", "AWS", "HTML5", "CSS3"],
+      skills: ["React", "TailwindCSS", "AWS", "BeautifulSoup","HTML5", "CSS3"],
       icon: Globe,
       softSkills: ["UI/UX Sensibility", "Responsive Design", "Cross-browser Compatibility"],
     },

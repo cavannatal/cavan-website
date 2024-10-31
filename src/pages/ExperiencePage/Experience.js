@@ -1,42 +1,7 @@
 import React from 'react';
-import { AcademicCapIcon, ShoppingCartIcon, DatabaseIcon, UserGroupIcon } from '@heroicons/react/solid';
-import TTU from '../images/ttu.png'
-import Maynooth from '../images/maynooth.png'
+import { AcademicCapIcon, ShoppingCartIcon, DatabaseIcon, UserGroupIcon, TerminalIcon } from '@heroicons/react/solid';
 
-const EducationSection = () => (
-    <div className="mb-12 max-w-4xl mx-auto">
-      {/* Texas Tech University */}
-      <div className="mb-12 flex flex-col md:flex-row items-center">
-        <div className="flex-grow text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-2">Texas Tech University</h2>
-          <h2 className="text-xl font-bold mb-4">Edward E. Whitacre Jr. College of Engineering</h2>
-          <h3 className="text-xl mb-2">B.S. in Computer Science</h3>
-          <h3 className="text-lg mb-2">Minor in Mathematics</h3>
-          <p className="text-gray-600 mb-2">Fall 2020 - Fall 2024</p>
-        </div>
-        <img 
-          src={TTU} 
-          alt="University Logo" 
-          className="mx-auto mt-3 mb-4" 
-        />
-      </div>
-  
-      {/* Maynooth University */}
-      <div className="flex flex-col md:flex-row items-center">
-        <div className="flex-grow text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-2">Maynooth University</h2>
-          <h2 className="text-xl font-bold mb-4">Department of Engineering</h2>
-          <h3 className="text-xl mb-2">Study Abroad Program</h3>
-          <p className="text-gray-600">Summer 2022</p>
-        </div>
-        <img 
-          src={Maynooth} 
-          alt="University Logo" 
-          className="mx-auto mt-3 mb-4" 
-        />
-      </div>
-    </div>
-  );
+import EducationSection from './components/EducationSection';
 
   const TimelineItem = ({ title, organization, link, date, description, icon: Icon }) => (
     <div className="flex">
@@ -67,6 +32,19 @@ const EducationSection = () => (
 
 const Experience = () => {
   const experiences = [
+    {
+      title: "Software Engineer",
+      organization: "Fibb.ai (Startup)",
+      date: "September 2024 - Present",
+      link:'https://www.blueverse.club/',
+      description: [
+      "Designed and developed the complete UI/UX for the website, creating a cohesive user experience and documenting page functionality along with component specifications for future scalability",
+      'Initialized and configured a React TypeScript repository, integrating AWS services such as Amplify and Cognito, and implemented Redux to manage global state efficiently across the application, enhancing performance and data consistency.',
+      'Managed end-to-end workflow for user token balances, file upload processes, and gallery display by integrating AWS S3 for efficient storage and retrieval, ensuring seamless user interactions and optimized resource handling.',
+      'Established and structured the iOS app repository using Swift, overseeing architecture development and comprehensive documentation to support scalable app evolution.',  
+      ],
+      icon: TerminalIcon,
+    },
     {
       title: "Data Analyst",
       organization: "BlueVerse (Startup)",
